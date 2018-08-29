@@ -1,11 +1,4 @@
 # Hangman game
-#
-
-# -----------------------------------
-# Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
 
 import random
 
@@ -36,11 +29,7 @@ def chooseWord(wordlist):
     """
     return random.choice(wordlist)
 
-# end of helper code
-# -----------------------------------
-
-# Load the list of words into the variable wordlist
-# so that it can be accessed from anywhere in the program
+#load words
 wordlist = loadWords()
 
 def isWordGuessed(secretWord, lettersGuessed):
@@ -106,7 +95,6 @@ def hangman(secretWord):
 
     Follows the other limitations detailed in the problem write-up.
     '''
-    # FILL IN YOUR CODE HERE...
 
     lettersGuessed = []
     guessCount = 8
@@ -134,15 +122,7 @@ def hangman(secretWord):
     else:
         print("Sorry, you ran out of guesses. The word was " + secretWord)
                 
-        
-
-
-
-
-# When you've completed your hangman function, uncomment these two lines
-# and run this file to test! (hint: you might want to pick your own
-# secretWord while you're testing)
-
 secretWord = chooseWord(wordlist).lower()
-print(secretWord)
+#Use this to print answer when checking for answer
+#print(secretWord)
 hangman(secretWord)
